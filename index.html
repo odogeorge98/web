@@ -30,7 +30,7 @@
             <a class="nav-link" href="#community">Community</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://github.com/software-engineering-on-x" target="_blank">GitHub <i class="fab fa-github"></i>
+            <a class="nav-link" href="https://t.co/nelmzkCzFH" target="_blank">GitHub <i class="fab fa-github"></i>
             </a>
           </li>
           <li class="nav-item">
@@ -60,19 +60,28 @@
     <div class="lined-heading">
       <h1 class="display-4">Software Engineering</h1>
   </div>
-    <section class="container mt-5">
-      <div class="content-box">
-          <img src="IMGS/software_logo.png" alt="Profile Picture">
-          <p class="lead">
-              Join us in shaping the future of software engineering.<br>"Explore our vibrant community of passionate developers, engineers, and innovators dedicated to pushing the boundaries of software engineering. Together, we collaborate, learn, and inspire one another, driving forward groundbreaking solutions and advancements in technology. Join us today and be a part of the exciting journey towards a brighter, more connected future in software engineering!"
-          </p>
-      </div>
+  <section class="container mt-5">
+    <div class="content-box">
+      <img src="IMGS/software_logo.png" alt="Profile Picture">
+      <p class="lead">
+        Join us in shaping the future of software engineering.<br>
+        "Explore our vibrant community of passionate developers, engineers, and innovators dedicated to pushing the boundaries of software engineering. Together, we collaborate, learn, and inspire one another, driving forward groundbreaking solutions and advancements in technology. Join us today and be a part of the exciting journey towards a brighter, more connected future in software engineering!"
+      </p>
+    </div>
   </section>
 
-    <section class="jumbotron text-center bg-transparent ">
-      <h2 class="display-5">Innovate, Collaborate, Succeed</h2>
-      <p class="lead">Connect with like-minded professionals and experts.</p>
-    </section>
+  <section class="jumbotron text-center bg-transparent">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <h2 class="display-5">Innovate, Collaborate, Succeed</h2>
+          <p>Welcome to our Software Community! Connect with like-minded professionals and experts in the field of software development. Share your knowledge, learn from others, and grow together in a collaborative environment.</p>
+          <p>Our community offers a platform for innovation, collaboration, and success. Whether you are a seasoned developer or just starting out, you'll find valuable resources, engaging discussions, and a supportive network to help you achieve your goals.</p>
+          <p>Join us today and be a part of a vibrant community that is passionate about technology, coding, and continuous learning. Together, we can push the boundaries of what's possible in software development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <section id="partners" class="my-5">
       <h2 class="text-center">Community Partners</h2>
@@ -400,10 +409,12 @@
   <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 
    <footer class="footer mt-5">
-    <div class="container mt-5">
-      <button id="popupButton" class="btn btn-primary">Show Popup</button>
-  </div>
+   
   
+  <button id="footer-mode-toggle" class="btn btn-outline-light">
+    <i class="fas fa-sun"></i>
+  </button>
+
   <div id="popupContainer" class="popup-container">
       <span id="closePopup" class="close-icon" style="color: black;">&times;</span>
       <h1>Community Guidelines</h1>
@@ -426,7 +437,10 @@
             <!-- About Section -->
             <div class="col-md-3">
                 <h5>About Us</h5>
-                <p>We are a community of software engineers dedicated to sharing knowledge, resources, and best practices in software development.</p>
+                <p>We are a community of software engineers dedicated to sharing knowledge, resources, and best practices in software development.<br><div class="container mt-5">
+                  <button id="popupButton" class="btn btn-primary">Rules</button>
+              </div></p>
+                
             </div>
             <!-- Quick Links -->
             <div class="col-md-3">
@@ -448,12 +462,14 @@
                     Address: 123 Software Lane, Tech City
                 </p>
             </div>
+            <i class="fa-brands fa-x-twitter"></i>
             <!-- Social Media Links -->
             <div class="col-md-3">
                 <h5>Follow Us</h5>
                 <div class="social-icons">
                     <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    <i class="fab fa-twitter"></i>
+
                     <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#" class="text-white"><i class="fab fa-github"></i></a>
                 </div>
@@ -462,9 +478,7 @@
                     <div class="form-group">
                         <input type="email" class="form-control" placeholder="Enter your email">
                     </div>
-                    <button id="footer-mode-toggle" class="btn btn-outline-light">
-                      <i class="fas fa-sun"></i>
-                    </button>
+                   
                     <button type="submit" class="btn btn-primary">Subscribe</button>
                 </form>
             </div>

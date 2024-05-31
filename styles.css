@@ -135,7 +135,6 @@ footer {
   }
 }
 
-/* For smaller screens, display items in 2x2 grid */
 @media (max-width: 599px) {
   .word-animation {
     grid-template-columns: repeat(2, 1fr);
@@ -144,16 +143,22 @@ footer {
 
 /* Display images in 2x2 grid for smaller screens */
 @media (max-width: 768px) {
-  .col-12 {
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-md-4 {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
+
 .lined-heading {
   display: flex;
   align-items: center;
   text-align: center;
 }
+
 .lined-heading::before,
 .lined-heading::after {
   content: "";
@@ -161,10 +166,10 @@ footer {
   border-bottom: 2px solid #000;
   margin: 0 10px;
 }
+
 .lined-heading h1 {
   margin: 0;
 }
-
 
 .content-box {
   position: relative;
@@ -186,6 +191,7 @@ footer {
   border-radius: 50%;
   border: none;
 }
+
 .dark-mode .content-box {
   background-color: rgb(30, 30, 30) !important;
 }
@@ -203,17 +209,20 @@ footer {
   z-index: 1050;
   color: black;
 }
+
 .close-icon {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
 }
+
 .scrollable-container {
   max-height: 300px; /* Adjust this value as needed */
   overflow-y: auto;
   padding-right: 15px; /* For preventing horizontal scroll due to padding */
 }
+
 #topBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
@@ -231,4 +240,20 @@ footer {
 
 #topBtn:hover {
   background-color: #0056b3; /* Darker background on hover */
+}
+
+@media (max-width: 768px) {
+  .content-box {
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  .content-box img {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+  }
 }

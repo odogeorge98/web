@@ -64,7 +64,6 @@ $(document).ready(function() {
   });
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
   var mybutton = document.getElementById("topBtn");
 
@@ -81,6 +80,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // When the user clicks on the button, scroll to the top of the document
   window.topFunction = function() {
-      $('html, body').animate({scrollTop: 0}, '300');
+    // Scroll to the top of the document with smooth behavior
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 });
