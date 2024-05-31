@@ -1,0 +1,234 @@
+/* Custom styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  margin-bottom: 80px;
+  background-color: #000; /* Black header background */
+}
+
+.navbar {
+  background-color: transparent; /* Transparent navbar background */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff; /* White navbar links */
+}
+
+footer {
+  margin-top: 40px;
+  background-color: #000; /* Black footer background */
+  color: #fff; /* White footer text color */
+}
+
+.dark-mode {
+  background-image: url('IMGS/black.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .navbar,
+.dark-mode footer {
+  background-color: #1f1f1f !important;
+}
+
+.dark-mode .btn-outline-light {
+  border-color: #e0e0e0 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .grid-item {
+  background-color: transparent !important;
+}
+
+.jumbotron {
+  color: #0b0b0b;
+  margin-bottom: 40px;
+  background-color: #f8f9fa; /* Light mode background color */
+}
+
+/* Add dark mode styles for .jumbotron */
+.dark-mode .jumbotron {
+  background-color: transparent !important; /* Dark mode background color */
+  color: #e0e0e0 !important;
+}
+
+.moderator2 {
+  background-color: #fdfafa;
+  border: #000;
+}
+
+.dark-mode .moderator2 {
+  background-color: #121212 !important;
+}
+
+.word-animation {
+  font-size: 2em;
+  display: grid;
+  white-space: nowrap;
+}
+
+.word-animation span {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+  filter: blur(10px); /* Initial blur effect */
+  display: inline;
+}
+
+.word-animation span.show {
+  opacity: 1;
+  filter: blur(0); /* Remove blur effect when word appears */
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0; /* Remove padding for larger screens */
+  }
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right, red, green);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card-img-top {
+  width: 100px;
+  height: 100px; /* Adjust the height as needed */
+  object-fit: cover;
+  border-radius: 150px;
+  text-align: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card {
+  text-align: center;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-gutters > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.btn-group {
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .word-animation {
+    grid-template-columns: repeat(4, 0.3fr);
+  }
+}
+
+/* For smaller screens, display items in 2x2 grid */
+@media (max-width: 599px) {
+  .word-animation {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Display images in 2x2 grid for smaller screens */
+@media (max-width: 768px) {
+  .col-12 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+.lined-heading {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.lined-heading::before,
+.lined-heading::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #000;
+  margin: 0 10px;
+}
+.lined-heading h1 {
+  margin: 0;
+}
+
+
+.content-box {
+  position: relative;
+  padding: 20px;
+  background-color: #fdfafa;
+  padding-left: 220px; /* Increased to accommodate the larger image */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 60px; /* Adjusted if necessary to match the layout */
+}
+
+.content-box img {
+  position: absolute;
+  top: 20px; /* Adjusted to position the image correctly */
+  left: -70px; /* Adjusted to position the image correctly */
+  width: 200px; /* Set to match the placeholder image size */
+  height: 200px; /* Set to match the placeholder image size */
+  border-radius: 50%;
+  border: none;
+}
+.dark-mode .content-box {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1050;
+  color: black;
+}
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.scrollable-container {
+  max-height: 300px; /* Adjust this value as needed */
+  overflow-y: auto;
+  padding-right: 15px; /* For preventing horizontal scroll due to padding */
+}
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #007bff; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#topBtn:hover {
+  background-color: #0056b3; /* Darker background on hover */
+}
